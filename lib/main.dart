@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Animate_do',
-      initialRoute: NavigationPage.routeName,
+      initialRoute: Page1.routeName,
       routes: {
         Page1.routeName: (BuildContext context) => Page1(),
         TwitterPage.routeName: (BuildContext context) => TwitterPage(),

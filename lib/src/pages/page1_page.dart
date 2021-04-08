@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:animate_do_app/src/pages/navigation_page.dart';
 import 'package:animate_do_app/src/pages/twitter_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,10 @@ class Page1 extends StatelessWidget {
           IconButton(
             icon: FaIcon(FontAwesomeIcons.twitter),
             onPressed: () {
-              Navigator.pushNamed(context, TwitterPage.routeName);
+              Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                      builder: (BuildContext context) => TwitterPage()));
             },
           ),
           SlideInLeft(
@@ -71,7 +75,12 @@ class Page1 extends StatelessWidget {
       floatingActionButton: ElasticInRight(
         child: FloatingActionButton(
           child: FaIcon(FontAwesomeIcons.play),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) => NavigationPage()));
+          },
         ),
       ),
     );
